@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response;
 public class LoadTest {
 
     private static final Logger logger = LoggerFactory.getLogger(LoadTest.class);
-    private static final String URL = "http://130.211.12.207/api/system/healthcheck";
+    private static final String URL = "http://130.211.12.207/api/some/api";
 
     static class Worker extends Thread {
         static MyStats<Long> stat = new MyStats<>(5000);
