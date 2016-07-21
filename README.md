@@ -19,8 +19,9 @@ sudo apt-get install -y git oracle-java8-installer
 
 # Load test setup
 Provision 3 instances:
-    1 for server, fronted with HTTP load balancer
-    2 for load generator
+* machine type: n1-standard-16, boot image: /debian-cloud/debian-8-jessie-v20160511
+* 1 for server, fronted with HTTP load balancer
+* 2 for load generator
 
 ## Start server
     ./gradlew clean jettyRun
