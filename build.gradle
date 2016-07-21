@@ -21,13 +21,15 @@ dependencies {
 }
 
 task jettyRun(type: JavaExec) {
-    jvmArgs = ['-server', '-Xms12G', '-Xmx12G', '-XX:+UseG1GC', '-XX:MaxGCPauseMillis=200', '-XX:ParallelGCThreads=20', 
+    jvmArgs = ['-server', '-Xms12G', '-Xmx12G', '-XX:+UseG1GC', '-XX:MaxGCPauseMillis=200', '-XX:ParallelGCThreads=20',
         '-XX:ConcGCThreads=5', '-XX:InitiatingHeapOccupancyPercent=70', '-XX:-MaxFDLimit']
     classpath = sourceSets.main.runtimeClasspath
     main = 'com.test.jersey.server.JettyApp'
 }
 
 task loadtest(type:JavaExec) {
+    jvmArgs = ['-Xms12G', '-Xmx12G', '-XX:+UseG1GC', '-XX:MaxGCPauseMillis=200', '-XX:ParallelGCThreads=20',
+        '-XX:ConcGCThreads=5', '-XX:InitiatingHeapOccupancyPercent=70', '-XX:-MaxFDLimit']
     main = 'com.test.jersey.client.LoadTest'
     classpath = sourceSets.main.runtimeClasspath
     if (project.hasProperty('args')) {
