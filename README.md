@@ -5,13 +5,17 @@ This repo contains simple server and client code to reproduce the lingering conn
 sudo vim /etc/apt/sources.list.d/java-8-debian.list
 
 add these two lines
+```
     deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
     deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main
+```
 
 ## update repo and install packages
+```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
 sudo apt-get update
 sudo apt-get install -y git oracle-java8-installer
+```
 
 # Load test setup
 Provision 3 instances:
