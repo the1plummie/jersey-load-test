@@ -31,7 +31,7 @@ public class ServiceSystem {
     }
 
     @GET
-    @Path("/v0/targeting_profile")
+    @Path("/some/api")
     public String someTestApi() throws Exception {
         TimeUnit.MILLISECONDS.sleep(100);
         return "Still OK";
