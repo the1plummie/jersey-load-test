@@ -33,7 +33,7 @@ public class ServiceSystem {
     @GET
     @Path("/some/api")
     public String someTestApi() throws Exception {
-        TimeUnit.MILLISECONDS.sleep(100);
+        TimeUnit.MILLISECONDS.sleep(20);
         return "Still OK";
     }
 
