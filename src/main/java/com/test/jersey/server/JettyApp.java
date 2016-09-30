@@ -10,6 +10,7 @@ import java.util.Properties;
 
 
 public class JettyApp {
+
     public static void main(String[] args) throws Exception {
         int httpPort = 8080;
         int maxThreads = 1024;
@@ -38,4 +39,5 @@ public class JettyApp {
             throw new RuntimeException("error starting server", t);
         }
     }
+
 }
