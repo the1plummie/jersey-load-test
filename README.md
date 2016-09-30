@@ -28,3 +28,4 @@ Provision 3 instances:
 
 ## Start client, with 64 workers using 64 connections pool
     ./gradlew clean loadtest -Pargs="64 64"
+
